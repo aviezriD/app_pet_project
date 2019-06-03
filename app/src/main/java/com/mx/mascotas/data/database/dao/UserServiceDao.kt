@@ -15,8 +15,8 @@ interface UserServiceDao : BaseDao<UserService> {
     fun getListServiceByUser(user: String): LiveData<List<UserService>>
 
     //Inserta un nuevo registro a la tabla, cuando un usuario de de alta un servicio
-    @Insert
-    fun insertServicebyUser(userService:UserService) : Single<Long>
+    //@Insert
+    //fun insertServicebyUser(userService:UserService) : Single<Int>
 
     //Query que traerá todos los usuarios que ofrezcan un servicio en específico
     @Query("select * from userService Where idCatService=:idCatService")
